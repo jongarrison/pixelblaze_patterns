@@ -6,6 +6,9 @@ function (pixelCount) {
     y = Math.floor(i / width)
     x = i % width
     x = y % 2 == 1 ? width - 1 - x : x //zigzag
+    //JG - this line flips it sideways:
+    x = 1.0 - x
+    //JG - this line flips it upside down:
     y = 1 - y
     map.push([x, y])
   }
