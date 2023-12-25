@@ -1,0 +1,27 @@
+
+function (pixelCount) {
+  width = 10
+  var map = []
+  for (i = 0; i < pixelCount; i++) {
+    y = Math.floor(i / width)
+    x = i % width
+    x = y % 2 == 1 ? width - 1 - x : x //zigzag
+    y = 1 - y
+    map.push([x, y])
+  }
+  return map
+}
+
+//default matrix pattern:
+
+function (pixelCount) {
+  width = 10
+  var map = []
+  for (i = 0; i < pixelCount; i++) {
+    y = Math.floor(i / width)
+    x = i % width
+    x = y % 2 == 1 ? width - 1 - x : x //zigzag
+    map.push([x, y])
+  }
+  return map
+}

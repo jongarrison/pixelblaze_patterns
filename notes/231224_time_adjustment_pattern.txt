@@ -1,0 +1,12 @@
+
+export var timeAdjustment = 1.0
+
+export function sliderTimerAdjustment(v){
+  v = 1.0 - v
+  //The coefficient of v here can be adjust to achieve different speed effects for each patter
+  timeAdjustment = 1.0 + (7 * v)
+}
+
+//After the above is pasted in, you then have to use "timeAdjustment *" in various places to change the actual rendering
+
+
